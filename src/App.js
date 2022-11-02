@@ -16,6 +16,11 @@ function App() {
   }
   return (
     <div className="App">
+      <head>
+        <meta>
+        dumb app for friends
+        </meta>
+      </head>
      <h1>
       {`CHEER UP ${person}!`}
      </h1>
