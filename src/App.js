@@ -1,8 +1,12 @@
 import { useState  } from 'react';
 import './App.css';
 
+
 function App() {
   const [person, setPerson] = useState('')
+  const handlePerson = e => {
+    setPerson(e.target.value)
+  }
   return (
     <div className="App">
      <h1>
@@ -16,7 +20,12 @@ function App() {
       <button onClick={() => setPerson('HENRY')}>HENRY</button>
       <button onClick={() => setPerson('DANNY')}>DANNY</button>
       <button onClick={() => setPerson('EMMA')}>EMMA</button>
+      <button onClick={() => setPerson('LEILA')}>LEILA</button>
      </div>
+     <label for='custom'>
+      NAME: 
+      <input type={'text'} id='custom' onChange={handlePerson} />
+     </label>
     </div>
   );
 }
