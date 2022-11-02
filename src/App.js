@@ -1,7 +1,7 @@
 import { useState  } from 'react';
 import './App.css';
 
-const Peeps = ['MIKA', 'ELI', 'DERYA', 'MARCIE', 'DANNY', 'HENRY', 'EMMA', 'LEILA', 'SEBASTIAN']
+const Peeps = ['MIKA', 'ELI', 'DERYA', 'MARCIE', 'DANNY', 'HENRY', 'EMMA', 'LEILA', 'SEBASTIAN', 'MEL']
 const sortedPeeps = Peeps.sort()
 
 function App() {
