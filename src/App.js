@@ -1,8 +1,14 @@
 import { useState  } from 'react';
 import './App.css';
 
+const Peeps = ['MIKA', 'ELI', 'DERYA', 'MARCIE', 'DANNY', 'HENRY', 'EMMA', 'LEILA', 'SEBASTIAN']
 
 function App() {
+
+  const peepMap = Peeps.map(peep => {
+    return <button onClick={() => setPerson(peep)}>{peep}</button>
+  })
+
   const [person, setPerson] = useState('')
   const handlePerson = e => {
     setPerson(e.target.value)
@@ -13,14 +19,7 @@ function App() {
       {`CHEER UP ${person}!`}
      </h1>
      <div>
-      <button onClick={() => setPerson('MIKA')}>MIKA</button>
-      <button onClick={() => setPerson('ELI')}>ELI</button>
-      <button onClick={() => setPerson('DERYA')}>DERYA</button>
-      <button onClick={() => setPerson('MARCIE')}>MARCIE</button>
-      <button onClick={() => setPerson('HENRY')}>HENRY</button>
-      <button onClick={() => setPerson('DANNY')}>DANNY</button>
-      <button onClick={() => setPerson('EMMA')}>EMMA</button>
-      <button onClick={() => setPerson('LEILA')}>LEILA</button>
+      {peepMap}
      </div>
      <label for='custom'>
       NAME: 
