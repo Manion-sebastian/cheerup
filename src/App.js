@@ -2,10 +2,11 @@ import { useState  } from 'react';
 import './App.css';
 
 const Peeps = ['MIKA', 'ELI', 'DERYA', 'MARCIE', 'DANNY', 'HENRY', 'EMMA', 'LEILA', 'SEBASTIAN']
+const sortedPeeps = Peeps.sort()
 
 function App() {
 
-  const peepMap = Peeps.map(peep => {
+  const peepMap = sortedPeeps.map(peep => {
     return <button onClick={() => setPerson(peep)}>{peep}</button>
   })
 
